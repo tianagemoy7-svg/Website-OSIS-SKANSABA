@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+    --biru-tua: #0c2a6b;
+    --biru-terang: #2563eb;
+    --ungu: #7c3aed;
+    --putih: #ffffff;
+    --abu-lembut: #f8fafc;
+    --hijau-tombol: #16a34a;
+    --bayangan: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+body {
+    background: linear-gradient(135deg, var(--biru-tua), var(--biru-terang));
+    min-height: 100vh;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hiasan {position: absolute; opacity: 0.08; z-index: 0;}
+.lingkaran-1 {width: 250px; height: 250px; background: white; border-radius: 50%; top: -80px; right: -80px;}
+.lingkaran-2 {width: 180px; height: 180px; background: #93c5fd; border-radius: 50%; bottom: -50px; left: -50px;}
+.kotak-miring {width: 120px; height: 120px; background: white; transform: rotate(45deg); top: 40%; left: 10px;}
+.bintang {top: 15%; left: 15%; font-size: 40px; color:white; opacity:0.15;}
+.bintang2 {bottom: 20%; right: 8%; font-size: 50px; color:white; opacity:0.12;}
+
+.sembunyi {display: none !important;}
+
+.layar-penuh {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 25px; position: relative; z-index: 1;
+}
+.kotak-sambutan {
+    background: rgba(255,255,255,0.95);
+    border-radius: 24px; padding: 40px 30px; text-align: center;
+    box-shadow: var(--bayangan); max-width: 450px; width: 100%;
+    border: 3px solid rgba(255,255,255,0.3);
+}
+.bingkai-gambar {
+    background: linear-gradient(45deg, #bfdbfe, #93c5fd);
+    width: 130px; height:130px; margin:0 auto 15px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+}
+.logo-besar {width: 85px;}
+.kotak-sambutan h1 {color: var(--biru-tua); font-size: 28px; margin-bottom: 5px;}
+.kotak-sambutan h2 {color: var(--biru-terang); font-size: 22px; margin-bottom: 8px;}
+.kotak-sambutan h3 {color: #444; font-size: 18px; margin-bottom: 15px;}
+.motto {font-style: italic; color: #555; margin-bottom: 25px;}
+.btn-masuk {
+    background: linear-gradient(90deg, var(--biru-tua), var(--ungu));
+    color: white; border: none; padding: 14px 35px;
+    font-size: 17px; font-weight: bold; border-radius: 50px;
+    cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.btn-masuk:hover {transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0,0,0,0.25);}
+
+.wadah {max-width: 520px; margin: 0 auto; padding: 25px 20px 40px; position:relative; z-index:1;}
+.header-menu {
+    background: rgba(255,255,255,0.98); padding: 15px;
+    text-align: center; border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.logo-kecil {width: 60px; vertical-align: middle; margin-right: 8px;}
+.header-menu h2 {display: inline-block; color: var(--biru-tua); font-size: 20px;}
+.judul-bagian {
+    text-align: center; color: white; font-size: 24px;
+    margin: 20px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.grid-pilihan {
+    display: grid; grid-template-columns: 1fr; gap: 14px;
+    margin-top: 25px;
+}
+.kartu-pilihan {
+    background: white; border-radius: 16px; padding: 22px;
+    text-align: center; cursor: pointer; transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-left: 5px solid var(--ungu);
+}
+.kartu-pilihan:hover {transform: translateY(-4px); box-shadow: 0 15px 30px rgba(0,0,0,0.18);}
+.ikon {font-size: 40px; margin-bottom: 8px;}
+.kartu-pilihan h3 {color: var(--biru-tua); margin-bottom: 5px;}
+.kartu-pilihan p {color: #666; font-size: 14px;}
+
+.kotak-tombol {display: flex; flex-direction: column; gap: 12px;}
+.tombol-sosmed {
+    display: block; padding: 15px; border-radius: 12px;
+    text-align: center; text-decoration: none; color: white;
+    font-weight: bold; transition: 0.3s;
+}
+.tombol-sosmed:hover {transform: scale(1.02);}
+.ig {background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);}
+.tiktok {background: linear-gradient(45deg, #000000, #25F4EE, #FE2C55); color: white !important;}
+
+.grid-foto {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.item-foto {
+    width: 100%; aspect-ratio: 4/3; object-fit: cover;
+    border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.item-foto:hover {transform:scale(1.03);}
+.catatan-galeri {
+    text-align: center; color: white; font-size: 12px;
+    margin-top: 8px; opacity: 0.8;
+}
+
+.kotak-illustrasi {text-align:center; margin-bottom:10px;}
+.gambar-ilustrasi {width: 180px; height:auto;}
+.hiasan-dalam {border-top: 5px solid var(--ungu);}
+.pilihan-kirim {
+    display:flex; flex-direction:column; gap:10px; margin:10px 0 20px;
+}
+.pilih-calon {
+    background:#f0f4ff; padding:12px; border-radius:10px; cursor:pointer;
+    border:2px solid transparent; transition:0.2s;
+}
+.pilih-calon:has(input:checked) {border-color:var(--ungu); background:#e0e7ff; font-weight:bold;}
+.btn-ungu {background: linear-gradient(90deg, var(--ungu), #a855f7);}
+.btn-ungu:hover {background: linear-gradient(90deg, #6d28d9, var(--ungu));}
+
+.form-kotak {
+    background: white; border-radius: 16px; padding: 25px; box-shadow: var(--bayangan);
+}
+.form-kotak input, .form-kotak textarea {
+    width: 100%; padding: 13px; margin-bottom: 12px;
+    border: 2px solid #bfdbfe; border-radius: 10px;
+    font-size: 15px; outline: none; transition:0.2s;
+}
+.form-kotak input:focus, .form-kotak textarea:focus {border-color: var(--ungu); box-shadow:0 0 0 3px rgba(124,58,237,0.1);}
+.btn-kirim {
+    width: 100%; padding: 13px; background: var(--hijau-tombol);
+    color: white; border: none; border-radius: 10px;
+    font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s;
+}
+.btn-kirim:hover {background: #15803d; transform:translateY(-1px);}
+.notif {margin-top: 10px; text-align: center; font-weight: bold;}
+
+.btn-kembali {
+    display: block; width: 100%; margin-top: 18px; padding: 12px;
+    background: rgba(255,255,255,0.25); color: white; border: 2px solid white;
+    border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-kembali:hover {background: rgba(255,255,255,0.4);}
+.btn-kembali-bawah {
+    width: 100%; margin-top: 20px; padding: 12px;
+    background: rgba(255,255,255,0.2); color: white; border: 1px solid white;
+    border-radius: 10px; font-weight: bold; cursor: pointer;
+}

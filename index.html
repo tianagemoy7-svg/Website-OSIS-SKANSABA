@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMK NEGERI 1 BANYUPUTIH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hiasan lingkaran-1"></div>
+<div class="hiasan lingkaran-2"></div>
+<div class="hiasan kotak-miring"></div>
+<div class="hiasan bintang">✦</div>
+<div class="hiasan bintang2">✦</div>
+
+<div id="halamanAwal" class="layar-penuh">
+    <div class="kotak-sambutan">
+        <div class="bingkai-gambar">
+            <img src="logo.png" alt="Logo OSIS" class="logo-besar">
+        </div>
+        <h1>SELAMAT DATANG</h1>
+        <h2>DI WEBSITE RESMI OSIS</h2>
+        <h3>SMK NEGERI 1 BANYUPUTIH</h3>
+        <p class="motto">"Ramah, Kreatif, dan Berprestasi"</p>
+        <button class="btn-masuk" onclick="bukaMenuUtama()">MASUK KE MENU 🚀</button>
+    </div>
+</div>
+
+<div id="halamanMenu" class="sembunyi">
+    <div class="header-menu">
+        <img src="logo.png" alt="Logo" class="logo-kecil">
+        <h2>MENU UTAMA OSIS</h2>
+    </div>
+    <div class="grid-pilihan">
+        <div class="kartu-pilihan" onclick="tampilkanSosmed()">
+            <div class="ikon">📲</div>
+            <h3>Akun Media Sosial</h3>
+            <p>Temukan kami di IG & TikTok</p>
+        </div>
+        <div class="kartu-pilihan" onclick="tampilkanGaleri()">
+            <div class="ikon">🖼️</div>
+            <h3>Galeri Kegiatan</h3>
+            <p>Dokumentasi program kerja</p>
+        </div>
+        <div class="kartu-pilihan" onclick="tampilkanDaftarOsis()">
+            <div class="ikon">📥</div>
+            <h3>Pendaftaran OSIS</h3>
+            <p>Bergabunglah bersama kami!</p>
+        </div>
+        <div class="kartu-pilihan" onclick="tampilkanRegistrasi()">
+            <div class="ikon">🏆</div>
+            <h3>Registrasi Lomba</h3>
+            <p>Daftar diri perlombaan</p>
+        </div>
+        <div class="kartu-pilihan" onclick="tampilkanLapor()">
+            <div class="ikon">💬</div>
+            <h3>Saran & Laporan</h3>
+            <p>Sampaikan aspirasi kalian</p>
+        </div>
+    </div>
+    <button class="btn-kembali-bawah" onclick="kembaliKeAwal()">← Kembali ke Halaman Awal</button>
+</div>
+
+<div id="halamanSosmed" class="sembunyi">
+    <div class="wadah">
+        <h2 class="judul-bagian">📲 TEMUKAN KAMI</h2>
+        <div class="kotak-tombol">
+            <a href="https://www.instagram.com/osisskansaba_?igsh=MW54anR2ZTdxdjJpcg==" target="_blank" class="tombol-sosmed ig">
+                <b>INSTAGRAM</b><br>@osisskansaba_
+            </a>
+            <a href="https://www.tiktok.com/@osissmkn1banyputih?_r=1&_t=ZS-98Jt9Ia83Mq" target="_blank" class="tombol-sosmed tiktok">
+                <b>TIKTOK</b><br>@osissmkn1banyputih
+            </a>
+        </div>
+        <button class="btn-kembali" onclick="kembaliKeMenu()">🔙 Kembali ke Menu Utama</button>
+    </div>
+</div>
+
+<div id="halamanGaleri" class="sembunyi">
+    <div class="wadah">
+        <h2 class="judul-bagian">🖼️ GALERI KEGIATAN</h2>
+        <div class="grid-foto">
+            <img src="foto1.jpg" alt="Kegiatan 1" class="item-foto">
+            <img src="foto2.jpg" alt="Kegiatan 2" class="item-foto">
+            <img src="foto3.jpg" alt="Kegiatan 3" class="item-foto">
+            <img src="foto4.jpg" alt="Kegiatan 4" class="item-foto">
+        </div>
+        <p class="catatan-galeri">*Ganti nama file foto1.jpg s.d foto4.jpg dengan fotomu sendiri</p>
+        <button class="btn-kembali" onclick="kembaliKeMenu()">🔙 Kembali ke Menu Utama</button>
+    </div>
+</div>
+
+<div id="halamanDaftarOsis" class="sembunyi">
+    <div class="wadah">
+        <div class="kotak-illustrasi">
+            <img src="daftarosis.png" alt="Ilustrasi Bergabung" class="gambar-ilustrasi">
+        </div>
+        <h2 class="judul-bagian">📥 PENDAFTARAN ANGGOTA OSIS</h2>
+        <div class="form-kotak hiasan-dalam">
+            <input type="text" id="namaCalon" placeholder="Nama Lengkap Kamu" required>
+            <input type="text" id="kelasCalon" placeholder="Asal Kelas (Contoh: X AK 1)" required>
+
+            <p style="text-align:center; font-weight:bold; color:#0c2a6b; margin:15px 0 5px;">Pilih Tujuan Pengiriman:</p>
+            
+            <div class="pilihan-kirim">
+                <label class="pilih-calon">
+                    <input type="radio" name="tujuan" value="kamil" checked>
+                    <span>👤 Dikirim ke Kak <b>KAMIL</b></span>
+                </label>
+                <label class="pilih-calon">
+                    <input type="radio" name="tujuan" value="salma">
+                    <span>👤 Dikirim ke Kak <b>SALMA</b></span>
+                </label>
+            </div>
+
+            <button onclick="kirimDaftarOsis()" class="btn-kirim btn-ungu">KIRIM FORMULIR ✨</button>
+            <div id="notifOsis" class="notif"></div>
+        </div>
+        <button class="btn-kembali" onclick="kembaliKeMenu()">🔙 Kembali ke Menu Utama</button>
+    </div>
+</div>
+
+<div id="halamanRegistrasi" class="sembunyi">
+    <div class="wadah">
+        <h2 class="judul-bagian">🏆 FORM PENDAFTARAN LOMBA</h2>
+        <div class="form-kotak">
+            <input type="text" id="namaPeserta" placeholder="Nama Lengkap Peserta" required>
+            <input type="text" id="namaLomba" placeholder="Lomba yang Diikuti" required>
+            <input type="text" id="kelasPeserta" placeholder="Asal Kelas" required>
+            <button onclick="kirimRegistrasi()" class="btn-kirim">KIRIM PENDAFTARAN</button>
+            <div id="notifReg" class="notif"></div>
+        </div>
+        <button class="btn-kembali" onclick="kembaliKeMenu()">🔙 Kembali ke Menu Utama</button>
+    </div>
+</div>
+
+<div id="halamanLapor" class="sembunyi">
+    <div class="wadah">
+        <h2 class="judul-bagian">💬 SARAN, KRITIK & LAPORAN</h2>
+        <div class="form-kotak">
+            <input type="text" id="namaPelapor" placeholder="Nama Panjang Kamu" required>
+            <input type="text" id="kelasPelapor" placeholder="Kelas Kamu" required>
+            <textarea id="isiLaporan" rows="4" placeholder="Tuliskan saran, kritik, atau laporanmu..." required></textarea>
+            <button onclick="kirimLapor()" class="btn-kirim">KIRIM KE OSIS</button>
+            <div id="notifLapor" class="notif"></div>
+        </div>
+        <button class="btn-kembali" onclick="kembaliKeMenu()">🔙 Kembali ke Menu Utama</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
